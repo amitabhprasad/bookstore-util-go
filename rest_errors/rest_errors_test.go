@@ -30,3 +30,7 @@ func TestNewNotFoundError(t *testing.T) {
 func TestNewError(t *testing.T) {
 
 }
+
+func TestNewUnAuthorizedError(t *testing.T) {
+
+}
