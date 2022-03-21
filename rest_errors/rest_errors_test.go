@@ -20,7 +20,7 @@ func TestNewInternaalServerError(t *testing.T) {
 }
 
 func TestNewBadRequestError(t *testing.T) {
-
+	// to implement
 }
 
 func TestNewNotFoundError(t *testing.T) {
