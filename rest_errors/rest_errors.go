@@ -39,6 +39,7 @@ func (e restErr) Error() string {
 func (e restErr) GetErrorField() string {
 	return e.error
 }
+
 func NewBadRequestError(message string) RestErr {
 	return restErr{
 		message: message,
@@ -46,6 +47,14 @@ func NewBadRequestError(message string) RestErr {
 		error:   "bad_request",
 	}
 }
+
+// func NewRestErroFromBytes(bytes []byte) (RestErr, error) {
+// 	var apiError restErr
+// 	if err := json.Unmarshal(bytes, &apiError); err != nil {
+// 		return nil, errors.New("invalid json")
+// 	}
+// 	return apiError, nil
+// }
 
 func NewNotFoundError(message string) RestErr {
 	return restErr{
