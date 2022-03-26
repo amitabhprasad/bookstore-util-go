@@ -33,7 +33,7 @@ func (e restErr) Causes() []interface{} {
 }
 
 func (e restErr) Error() string {
-	return fmt.Sprintf("message: %s - status: %d - error: %s - causes: %v", e.message, e.status, e.error, e.causes)
+	return fmt.Sprintf("message: %s - status: %d - error: %s - causes: %v", e.ErrMessage, e.ErrStatus, e.ErrError, e.ErrCauses)
 }
 
 func (e restErr) GetErrorField() string {
